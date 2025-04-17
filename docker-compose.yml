@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: jenkins/Dockerfile.backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./ml_model/models:/app/ml_model/models
+      - ./data/processed:/app/data/processed
