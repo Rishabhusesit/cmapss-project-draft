@@ -1,0 +1,11 @@
+import tensorflow as tf
+
+lstm = tf.keras.models.load_model("ml_model/models/lstm.h5", compile=False)
+lstm.save("ml_model/models/lstm_converted.keras")
+
+file ml_model/models/lstm_converted.keras
+
+
+# Load and re-save the Autoencoder model
+ae = tf.keras.models.load_model("ml_model/models/autoencoder.h5", compile=False)
+ae.save("ml_model/models/autoencoder_converted.keras")
